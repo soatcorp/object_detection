@@ -106,3 +106,14 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+Mask_RCNN/
+mscoco2017/
+bdd100k/
+keras-centernet/
+/keras_centernet
+keras-yolo3/
+/yolo3
+/mrcnn
+data_labels/
+model_data/
