@@ -24,7 +24,7 @@ for image in labeled_images:
                 cat = class_dict[label['attributes']['laneType']]
                 poly2d = np.array(label['poly2d'][0]['vertices'])
                 x1, y1 = np.min(poly2d, axis = 0)
-                x2, y2 = np.min(poly2d, axis = 0)
+                x2, y2 = np.max(poly2d, axis = 0)
 
             else:
                 cat = class_dict[label['category']]
