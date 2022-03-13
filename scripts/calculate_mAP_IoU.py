@@ -5,7 +5,7 @@ import numpy as np
 import sys
 import glob
 
-"""clone repository 'https://github.com/seqsense/Object-Detection-Metrics'"""
+"""clone repository 'https://github.com/soatcorp/Object-Detection-Metrics'"""
 
 from lib.BoundingBox import BoundingBox
 from lib.BoundingBoxes import BoundingBoxes
