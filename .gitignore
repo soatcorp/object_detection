@@ -11,6 +11,7 @@ yolo3
 *.h5
 *.hdf5
 logs/
+results/
 *_test.py
 
 # Byte-compiled / optimized / DLL files
