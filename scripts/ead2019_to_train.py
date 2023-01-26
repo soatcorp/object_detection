@@ -8,9 +8,9 @@ def ead2019_to_train(ead2019_input_dir_path, output_dir_path):
 
     image_num = len(ead2019_input_txt_file_names)
     train_num = int(image_num * train_ratio)
-    eval_num = image_num - train_num
+    test_num = image_num - train_num
     output_train_file_name = os.path.join(output_dir_path, "train.txt")
-    output_eval_file_name = os.path.join(output_dir_path, "eval.txt")
+    output_test_file_name = os.path.join(output_dir_path, "test.txt")
 
     output_rows = []
     for ead2019_input_txt_file_name in ead2019_input_txt_file_names:
@@ -30,13 +30,13 @@ def ead2019_to_train(ead2019_input_dir_path, output_dir_path):
         output_rows.append(output_row)
 
     output_train_str = "\n".join(output_rows[:train_num])
-    output_eval_str = "\n".join(output_rows[train_num:])
+    output_test_str = "\n".join(output_rows[train_num:])
 
     with open(output_train_file_name, 'w') as f:
         f.write(output_train_str)
 
-    with open(output_eval_file_name, 'w') as f:
-        f.write(output_eval_str)
+    with open(output_test_file_name, 'w') as f:
+        f.write(output_test_str)
 
 def _main():
     parser = argparse.ArgumentParser()
