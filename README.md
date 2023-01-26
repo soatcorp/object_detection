@@ -14,7 +14,7 @@ export CUDA_DEVICE_ORDER=PCI_BUS_ID; export CUDA_VISIBLE_DEVICES=0;
 ## Prepare package
 [InstallCUDA](/InstallCUDA.md)
 ```
-git clone https://github.com/qqwweee/keras-yolo3
+git clone https://github.com/soatcoap/keras-yolo3
 ln -s keras-yolo3/yolo3 .
 pip3 install -r requirements.txt
 
