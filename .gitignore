@@ -1,3 +1,10 @@
+# symlinks
+keras_centernet
+keras-yolo3
+mrcnn
+yolo3
+
+# large data
 *.jpg
 *.png
 *.weights
