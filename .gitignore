@@ -9,6 +9,7 @@ yolo3
 *.png
 *.weights
 *.h5
+*.hdf5
 logs/
 *_test.py
 
