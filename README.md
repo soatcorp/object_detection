@@ -60,7 +60,7 @@ python3 test_image.py --model=model_data/mrcnn/coco/mask_rcnn_coco.h5 --classes=
 python3 test_image.py --model=model_data/keras-centernet/coco/ctdet_coco_hg.hdf5 --classes=model_data/keras-centernet/coco/classes.txt -i=images/pics/*.jpg -n=keras-centernet
 ```
 
-## Prepare Dataset
+## Prepare Dataset(mscoco)
 
 ```
 mkdir mscoco2017
@@ -87,6 +87,13 @@ less data_labels/polygon/coco/train_list.txt
 mscoco2017/train2017/000000558840.jpg [[[239,260,222,270,199,253,213,227,259,200,274,202,277,210,249,253,237,264,242,261,228,271]],53] [[[357,210,338,209,327,204,325,164,329,127,326,108,333,104,348,104,358,108,358,130]],40] [[[x1,y1,x2,y2,x3,y3,...][x1,y1,x2,y2,x3,y3,...][...]...],class_id]]....
 cd data_labels/polygon/coco/
 head train_list.txt -n 100 >  train_list_100.txt
+```
+
+## Prepare Dataset(ead2019 object detection)
+1. Download ead2019 dataset(trainingData_detection.zip) to downloads/ead2019 directory and unzip it.
+2. Convert to a format that can be used for learning.
+```
+python3 scripts/ead2019_to_train.py -e=downloads/ead2019/trainingData_detection -o=data_labels/bbox/ead2019
 ```
 
 ## Train Model
