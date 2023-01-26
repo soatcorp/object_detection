@@ -8,7 +8,6 @@ def ead2019_to_train(ead2019_input_dir_path, output_dir_path):
 
     image_num = len(ead2019_input_txt_file_names)
     train_num = int(image_num * train_ratio)
-    test_num = image_num - train_num
     output_train_file_name = os.path.join(output_dir_path, "train.txt")
     output_test_file_name = os.path.join(output_dir_path, "test.txt")
 
